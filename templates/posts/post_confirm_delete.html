@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link href="{% static 'styles.css' %}" rel="stylesheet" />
+{% endblock head %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Delete</h1>
+        <form method='POST'>
+            {% csrf_token %}
+            <button class="btn btn-danger" type='submit'>Confirm</button>
+        </form>
+    </div>
+
+{% endblock content %}
